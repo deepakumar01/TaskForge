@@ -76,7 +76,7 @@ const Team = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search by name or email..."
-          className="w-full pl-9 pr-4 py-2.5 rounded-xl border text-sm outline-none transition-all focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+          className="w-full pl-9 pr-4 py-2.5 rounded-sm border text-sm outline-none transition-all focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
           style={{
             backgroundColor: "var(--color-bg-secondary)",
             borderColor: "var(--color-border)",
@@ -90,7 +90,7 @@ const Team = () => {
         {filteredUsers.map((user) => (
           <div
             key={user._id}
-            className="rounded-xl p-5 border transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+            className="rounded-sm p-5 border transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5"
             style={{
               backgroundColor: "var(--color-bg-secondary)",
               borderColor: "var(--color-border)",
@@ -98,7 +98,7 @@ const Team = () => {
           >
             <div className="flex items-center gap-4">
               {/* Avatar */}
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 rounded-sm bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-bold text-lg">
                   {user.name?.charAt(0)?.toUpperCase() || "U"}
                 </span>
@@ -131,7 +131,7 @@ const Team = () => {
             <div className="mt-4 pt-3 border-t" style={{ borderColor: "var(--color-border)" }}>
               <span
                 className={
-                  "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium " +
+                  "inline-flex items-center gap-1.5 px-3 py-1 rounded-sm text-xs font-medium " +
                   (user.role === "admin"
                     ? "bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400"
                     : "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400")
@@ -151,7 +151,7 @@ const Team = () => {
 
       {filteredUsers.length === 0 && (
         <div
-          className="text-center py-16 rounded-xl border"
+          className="text-center py-16 rounded-sm border"
           style={{
             backgroundColor: "var(--color-bg-secondary)",
             borderColor: "var(--color-border)",

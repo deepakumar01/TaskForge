@@ -60,6 +60,8 @@ A full-stack MERN application for managing team projects, tasks, and collaborati
 - Activity logs tracking all user actions
 - Toast notifications
 - Loading states
+- Clean, rectangular UI design
+- Modern header and footer layout
 
 ## Project Structure
 
@@ -100,8 +102,8 @@ TaskForge/
       api/
         axios.js            # Configured Axios instance
       components/
-        Header.jsx          # Top navigation bar
-        Sidebar.jsx         # Side navigation
+        Header.jsx          # Top navigation bar with menu
+        Footer.jsx          # Bottom footer
         Modal.jsx           # Reusable modal dialog
         TaskCard.jsx        # Task display card
         StatsCard.jsx       # Statistics card
@@ -188,6 +190,9 @@ npm install
 ```
 
 ### Step 3: Configure environment variables
+
+> **⚠️ IMPORTANT:** You MUST update the `MONGO_URI` value in `.env` with a real MongoDB connection string, otherwise the backend will crash on startup!
+
 Open `backend/.env` and update the values:
 ```
 PORT=5000

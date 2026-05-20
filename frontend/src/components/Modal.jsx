@@ -44,7 +44,7 @@ const Modal = ({ isOpen, onClose, title, children, size = "md" }) => {
         className={
           "relative w-full " +
           sizes[size] +
-          " rounded-2xl shadow-2xl animate-fade-in max-h-[90vh] overflow-y-auto"
+          " rounded-sm shadow-2xl animate-fade-in max-h-[90vh] overflow-y-auto"
         }
         style={{
           backgroundColor: "var(--color-bg-secondary)",
@@ -64,7 +64,7 @@ const Modal = ({ isOpen, onClose, title, children, size = "md" }) => {
           </h2>
           <button
             onClick={onClose}
-            className="p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            className="p-1 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
             style={{ color: "var(--color-text-secondary)" }}
           >
             <HiX className="w-5 h-5" />

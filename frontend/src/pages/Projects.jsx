@@ -16,6 +16,7 @@ import {
   HiOutlineSearch,
   HiOutlineCalendar,
   HiOutlineUserGroup,
+  HiOutlineCollection,
 } from "react-icons/hi";
 
 const Projects = () => {
@@ -214,7 +215,7 @@ const Projects = () => {
               setFormData({ name: "", description: "", deadline: "", status: "active" });
               setShowCreateModal(true);
             }}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium text-sm hover:from-indigo-600 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/25"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium text-sm hover:from-indigo-600 hover:to-purple-700 transition-all shadow-sm "
           >
             <HiOutlinePlus className="w-4 h-4" />
             New Project
@@ -237,7 +238,7 @@ const Projects = () => {
               setPage(1);
             }}
             placeholder="Search projects..."
-            className="w-full pl-9 pr-4 py-2.5 rounded-xl border text-sm outline-none transition-all focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+            className="w-full pl-9 pr-4 py-2.5 rounded-sm border text-sm outline-none transition-all focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
             style={{
               backgroundColor: "var(--color-bg-secondary)",
               borderColor: "var(--color-border)",
@@ -251,7 +252,7 @@ const Projects = () => {
             setStatusFilter(e.target.value);
             setPage(1);
           }}
-          className="px-4 py-2.5 rounded-xl border text-sm outline-none cursor-pointer"
+          className="px-4 py-2.5 rounded-sm border text-sm outline-none cursor-pointer"
           style={{
             backgroundColor: "var(--color-bg-secondary)",
             borderColor: "var(--color-border)",
@@ -270,7 +271,7 @@ const Projects = () => {
         <LoadingSpinner text="Loading projects..." />
       ) : projects.length === 0 ? (
         <div
-          className="text-center py-16 rounded-xl border"
+          className="text-center py-16 rounded-sm border"
           style={{
             backgroundColor: "var(--color-bg-secondary)",
             borderColor: "var(--color-border)",
@@ -298,7 +299,7 @@ const Projects = () => {
             {projects.map((project) => (
               <div
                 key={project._id}
-                className="rounded-xl p-5 border transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+                className="rounded-sm p-5 border transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5"
                 style={{
                   backgroundColor: "var(--color-bg-secondary)",
                   borderColor: "var(--color-border)",
@@ -315,7 +316,7 @@ const Projects = () => {
                     </h3>
                     <span
                       className={
-                        "inline-block mt-1 px-2 py-0.5 rounded-full text-xs font-medium " +
+                        "inline-block mt-1 px-2 py-0.5 rounded-sm text-xs font-medium " +
                         statusBadge(project.status)
                       }
                     >
@@ -327,7 +328,7 @@ const Projects = () => {
                     <div className="flex items-center gap-1">
                       <button
                         onClick={() => openMemberModal(project)}
-                        className="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        className="p-1.5 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                         title="Manage Members"
                         style={{ color: "var(--color-text-secondary)" }}
                       >
@@ -335,7 +336,7 @@ const Projects = () => {
                       </button>
                       <button
                         onClick={() => openEditModal(project)}
-                        className="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        className="p-1.5 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                         title="Edit"
                         style={{ color: "var(--color-text-secondary)" }}
                       >
@@ -343,7 +344,7 @@ const Projects = () => {
                       </button>
                       <button
                         onClick={() => handleDelete(project._id)}
-                        className="p-1.5 rounded-lg hover:bg-red-50 dark:hover:bg-red-500/10 text-red-500 transition-colors"
+                        className="p-1.5 rounded-sm hover:bg-red-50 dark:hover:bg-red-500/10 text-red-500 transition-colors"
                         title="Delete"
                       >
                         <HiOutlineTrash className="w-4 h-4" />
@@ -426,7 +427,7 @@ const Projects = () => {
                 setFormData({ ...formData, name: e.target.value })
               }
               required
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={{
                 backgroundColor: "var(--color-bg-tertiary)",
                 borderColor: "var(--color-border)",
@@ -449,7 +450,7 @@ const Projects = () => {
                 setFormData({ ...formData, description: e.target.value })
               }
               rows={3}
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none resize-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none resize-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={{
                 backgroundColor: "var(--color-bg-tertiary)",
                 borderColor: "var(--color-border)",
@@ -472,7 +473,7 @@ const Projects = () => {
               onChange={(e) =>
                 setFormData({ ...formData, deadline: e.target.value })
               }
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={{
                 backgroundColor: "var(--color-bg-tertiary)",
                 borderColor: "var(--color-border)",
@@ -485,14 +486,14 @@ const Projects = () => {
             <button
               type="button"
               onClick={() => setShowCreateModal(false)}
-              className="px-4 py-2 rounded-xl text-sm font-medium transition-colors"
+              className="px-4 py-2 rounded-sm text-sm font-medium transition-colors"
               style={{ color: "var(--color-text-secondary)" }}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-6 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all"
+              className="px-6 py-2 rounded-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all"
             >
               Create Project
             </button>
@@ -521,7 +522,7 @@ const Projects = () => {
                 setFormData({ ...formData, name: e.target.value })
               }
               required
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={{
                 backgroundColor: "var(--color-bg-tertiary)",
                 borderColor: "var(--color-border)",
@@ -543,7 +544,7 @@ const Projects = () => {
                 setFormData({ ...formData, description: e.target.value })
               }
               rows={3}
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none resize-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none resize-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={{
                 backgroundColor: "var(--color-bg-tertiary)",
                 borderColor: "var(--color-border)",
@@ -564,7 +565,7 @@ const Projects = () => {
               onChange={(e) =>
                 setFormData({ ...formData, status: e.target.value })
               }
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none cursor-pointer focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none cursor-pointer focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={{
                 backgroundColor: "var(--color-bg-tertiary)",
                 borderColor: "var(--color-border)",
@@ -590,7 +591,7 @@ const Projects = () => {
               onChange={(e) =>
                 setFormData({ ...formData, deadline: e.target.value })
               }
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={{
                 backgroundColor: "var(--color-bg-tertiary)",
                 borderColor: "var(--color-border)",
@@ -603,14 +604,14 @@ const Projects = () => {
             <button
               type="button"
               onClick={() => setShowEditModal(false)}
-              className="px-4 py-2 rounded-xl text-sm font-medium transition-colors"
+              className="px-4 py-2 rounded-sm text-sm font-medium transition-colors"
               style={{ color: "var(--color-text-secondary)" }}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-6 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all"
+              className="px-6 py-2 rounded-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all"
             >
               Save Changes
             </button>
@@ -631,7 +632,7 @@ const Projects = () => {
             <select
               value={selectedMember}
               onChange={(e) => setSelectedMember(e.target.value)}
-              className="flex-1 px-4 py-2.5 rounded-xl border text-sm outline-none"
+              className="flex-1 px-4 py-2.5 rounded-sm border text-sm outline-none"
               style={{
                 backgroundColor: "var(--color-bg-tertiary)",
                 borderColor: "var(--color-border)",
@@ -655,7 +656,7 @@ const Projects = () => {
             <button
               onClick={handleAddMember}
               disabled={!selectedMember}
-              className="px-4 py-2 rounded-xl bg-indigo-500 text-white text-sm font-medium hover:bg-indigo-600 transition-colors disabled:opacity-50"
+              className="px-4 py-2 rounded-sm bg-indigo-500 text-white text-sm font-medium hover:bg-indigo-600 transition-colors disabled:opacity-50"
             >
               Add
             </button>
@@ -680,11 +681,11 @@ const Projects = () => {
               selectedProject?.members?.map((member) => (
                 <div
                   key={member._id}
-                  className="flex items-center justify-between p-3 rounded-xl"
+                  className="flex items-center justify-between p-3 rounded-sm"
                   style={{ backgroundColor: "var(--color-bg-tertiary)" }}
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
                       <span className="text-white font-semibold text-xs">
                         {member.name?.charAt(0)?.toUpperCase()}
                       </span>
@@ -706,7 +707,7 @@ const Projects = () => {
                   </div>
                   <button
                     onClick={() => handleRemoveMember(member._id)}
-                    className="text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 p-1.5 rounded-lg transition-colors"
+                    className="text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 p-1.5 rounded-sm transition-colors"
                   >
                     <HiOutlineTrash className="w-4 h-4" />
                   </button>

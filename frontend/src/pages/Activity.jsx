@@ -98,7 +98,7 @@ const Activity = () => {
 
       {/* Activity timeline */}
       <div
-        className="rounded-xl border overflow-hidden"
+        className="rounded-sm border overflow-hidden"
         style={{
           backgroundColor: "var(--color-bg-secondary)",
           borderColor: "var(--color-border)",
@@ -125,7 +125,7 @@ const Activity = () => {
                   {/* Action icon */}
                   <div
                     className={
-                      "w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 " +
+                      "w-10 h-10 rounded-sm flex items-center justify-center flex-shrink-0 " +
                       actionStyle.bg
                     }
                   >
@@ -149,7 +149,7 @@ const Activity = () => {
                       </span>
                       {activity.project && (
                         <span
-                          className="text-xs px-2 py-0.5 rounded-full"
+                          className="text-xs px-2 py-0.5 rounded-sm"
                           style={{
                             backgroundColor: "var(--color-bg-tertiary)",
                             color: "var(--color-text-secondary)",
@@ -162,7 +162,7 @@ const Activity = () => {
                   </div>
 
                   {/* User avatar */}
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-semibold text-xs">
                       {activity.user?.name?.charAt(0)?.toUpperCase() || "U"}
                     </span>

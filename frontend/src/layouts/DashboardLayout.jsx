@@ -1,33 +1,23 @@
 // src/layouts/DashboardLayout.jsx
-// Main layout wrapper with sidebar, header, and content area
+// Main layout wrapper with header, content area, and footer
 
-import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const DashboardLayout = () => {
-  // State to control mobile sidebar visibility
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "var(--color-bg-primary)" }}>
-      {/* Sidebar - fixed on desktop, slide-in on mobile */}
-      <Sidebar
-        isOpen={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
-      />
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "var(--color-bg-primary)" }}>
+      {/* Top navigation header */}
+      <Header />
 
-      {/* Main content area - offset by sidebar width on desktop */}
-      <div className="lg:ml-64 min-h-screen flex flex-col">
-        {/* Top header bar */}
-        <Header onMenuClick={() => setSidebarOpen(true)} />
+      {/* Main content area */}
+      <main className="flex-1 w-full max-w-7xl mx-auto p-4 lg:p-8">
+        <Outlet />
+      </main>
 
-        {/* Page content - rendered from nested routes */}
-        <main className="flex-1 p-4 lg:p-6 overflow-auto">
-          <Outlet />
-        </main>
-      </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

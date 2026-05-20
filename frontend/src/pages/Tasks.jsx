@@ -210,7 +210,7 @@ const Tasks = () => {
               });
               setShowCreateModal(true);
             }}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium text-sm hover:from-indigo-600 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/25"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium text-sm hover:from-indigo-600 hover:to-purple-700 transition-all shadow-sm "
           >
             <HiOutlinePlus className="w-4 h-4" />
             New Task
@@ -220,7 +220,7 @@ const Tasks = () => {
 
       {/* Filters */}
       <div
-        className="rounded-xl p-4 border mb-6"
+        className="rounded-sm p-4 border mb-6"
         style={{
           backgroundColor: "var(--color-bg-secondary)",
           borderColor: "var(--color-border)",
@@ -253,7 +253,7 @@ const Tasks = () => {
                 setPage(1);
               }}
               placeholder="Search tasks..."
-              className="w-full pl-9 pr-4 py-2 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full pl-9 pr-4 py-2 rounded-sm border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={inputStyle}
             />
           </div>
@@ -265,7 +265,7 @@ const Tasks = () => {
               setStatusFilter(e.target.value);
               setPage(1);
             }}
-            className="px-3 py-2 rounded-xl border text-sm outline-none cursor-pointer"
+            className="px-3 py-2 rounded-sm border text-sm outline-none cursor-pointer"
             style={inputStyle}
           >
             <option value="">All Status</option>
@@ -281,7 +281,7 @@ const Tasks = () => {
               setPriorityFilter(e.target.value);
               setPage(1);
             }}
-            className="px-3 py-2 rounded-xl border text-sm outline-none cursor-pointer"
+            className="px-3 py-2 rounded-sm border text-sm outline-none cursor-pointer"
             style={inputStyle}
           >
             <option value="">All Priority</option>
@@ -297,7 +297,7 @@ const Tasks = () => {
               setProjectFilter(e.target.value);
               setPage(1);
             }}
-            className="px-3 py-2 rounded-xl border text-sm outline-none cursor-pointer"
+            className="px-3 py-2 rounded-sm border text-sm outline-none cursor-pointer"
             style={inputStyle}
           >
             <option value="">All Projects</option>
@@ -309,7 +309,7 @@ const Tasks = () => {
           </select>
 
           {/* Overdue toggle */}
-          <label className="flex items-center gap-2 px-3 py-2 rounded-xl border cursor-pointer" style={inputStyle}>
+          <label className="flex items-center gap-2 px-3 py-2 rounded-sm border cursor-pointer" style={inputStyle}>
             <input
               type="checkbox"
               checked={overdueFilter}
@@ -331,7 +331,7 @@ const Tasks = () => {
         <LoadingSpinner text="Loading tasks..." />
       ) : tasks.length === 0 ? (
         <div
-          className="text-center py-16 rounded-xl border"
+          className="text-center py-16 rounded-sm border"
           style={{
             backgroundColor: "var(--color-bg-secondary)",
             borderColor: "var(--color-border)",
@@ -362,7 +362,7 @@ const Tasks = () => {
                       e.stopPropagation();
                       handleDelete(task._id);
                     }}
-                    className="absolute top-2 right-2 p-1.5 rounded-lg bg-red-500 text-white opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute top-2 right-2 p-1.5 rounded-sm bg-red-500 text-white opacity-0 group-hover:opacity-100 transition-opacity"
                     title="Delete task"
                   >
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -399,7 +399,7 @@ const Tasks = () => {
               onChange={(e) => setFormData({ ...formData, title: e.target.value })}
               required
               placeholder="Enter task title"
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={inputStyle}
             />
           </div>
@@ -413,7 +413,7 @@ const Tasks = () => {
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               rows={3}
               placeholder="Describe the task"
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none resize-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none resize-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={inputStyle}
             />
           </div>
@@ -427,7 +427,7 @@ const Tasks = () => {
                 value={formData.project}
                 onChange={(e) => setFormData({ ...formData, project: e.target.value })}
                 required
-                className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none cursor-pointer"
                 style={inputStyle}
               >
                 <option value="">Select project</option>
@@ -444,7 +444,7 @@ const Tasks = () => {
               <select
                 value={formData.assignedTo}
                 onChange={(e) => setFormData({ ...formData, assignedTo: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none cursor-pointer"
                 style={inputStyle}
               >
                 <option value="">Unassigned</option>
@@ -463,7 +463,7 @@ const Tasks = () => {
               <select
                 value={formData.priority}
                 onChange={(e) => setFormData({ ...formData, priority: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none cursor-pointer"
                 style={inputStyle}
               >
                 <option value="low">Low</option>
@@ -480,7 +480,7 @@ const Tasks = () => {
                 type="date"
                 value={formData.dueDate}
                 onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none"
+                className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none"
                 style={inputStyle}
               />
             </div>
@@ -490,14 +490,14 @@ const Tasks = () => {
             <button
               type="button"
               onClick={() => setShowCreateModal(false)}
-              className="px-4 py-2 rounded-xl text-sm font-medium"
+              className="px-4 py-2 rounded-sm text-sm font-medium"
               style={{ color: "var(--color-text-secondary)" }}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-6 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all"
+              className="px-6 py-2 rounded-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all"
             >
               Create Task
             </button>
@@ -521,7 +521,7 @@ const Tasks = () => {
               value={formData.title}
               onChange={(e) => setFormData({ ...formData, title: e.target.value })}
               required
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={inputStyle}
             />
           </div>
@@ -534,7 +534,7 @@ const Tasks = () => {
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               rows={3}
-              className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none resize-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none resize-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
               style={inputStyle}
             />
           </div>
@@ -547,7 +547,7 @@ const Tasks = () => {
               <select
                 value={formData.status}
                 onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none cursor-pointer"
                 style={inputStyle}
               >
                 <option value="pending">Pending</option>
@@ -563,7 +563,7 @@ const Tasks = () => {
               <select
                 value={formData.priority}
                 onChange={(e) => setFormData({ ...formData, priority: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none cursor-pointer"
                 style={inputStyle}
               >
                 <option value="low">Low</option>
@@ -581,7 +581,7 @@ const Tasks = () => {
               <select
                 value={formData.assignedTo}
                 onChange={(e) => setFormData({ ...formData, assignedTo: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none cursor-pointer"
                 style={inputStyle}
               >
                 <option value="">Unassigned</option>
@@ -599,7 +599,7 @@ const Tasks = () => {
                 type="date"
                 value={formData.dueDate}
                 onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none"
+                className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none"
                 style={inputStyle}
               />
             </div>
@@ -609,14 +609,14 @@ const Tasks = () => {
             <button
               type="button"
               onClick={() => setShowEditModal(false)}
-              className="px-4 py-2 rounded-xl text-sm font-medium"
+              className="px-4 py-2 rounded-sm text-sm font-medium"
               style={{ color: "var(--color-text-secondary)" }}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-6 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all"
+              className="px-6 py-2 rounded-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all"
             >
               Save Changes
             </button>

@@ -134,7 +134,7 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         {/* Progress Overview */}
         <div
-          className="lg:col-span-1 rounded-xl p-6 border"
+          className="lg:col-span-1 rounded-sm p-6 border"
           style={{
             backgroundColor: "var(--color-bg-secondary)",
             borderColor: "var(--color-border)",
@@ -240,7 +240,7 @@ const Dashboard = () => {
 
         {/* Task Distribution by Priority */}
         <div
-          className="lg:col-span-1 rounded-xl p-6 border"
+          className="lg:col-span-1 rounded-sm p-6 border"
           style={{
             backgroundColor: "var(--color-bg-secondary)",
             borderColor: "var(--color-border)",
@@ -268,9 +268,9 @@ const Dashboard = () => {
                   {stats?.highPriorityTasks || 0}
                 </span>
               </div>
-              <div className="w-full h-2.5 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+              <div className="w-full h-2.5 rounded-sm bg-gray-200 dark:bg-gray-700 overflow-hidden">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-red-500 to-red-400 transition-all duration-700"
+                  className="h-full rounded-sm bg-gradient-to-r from-red-500 to-red-400 transition-all duration-700"
                   style={{
                     width:
                       (stats?.totalTasks > 0
@@ -295,9 +295,9 @@ const Dashboard = () => {
                   {stats?.mediumPriorityTasks || 0}
                 </span>
               </div>
-              <div className="w-full h-2.5 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+              <div className="w-full h-2.5 rounded-sm bg-gray-200 dark:bg-gray-700 overflow-hidden">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-amber-500 to-amber-400 transition-all duration-700"
+                  className="h-full rounded-sm bg-gradient-to-r from-amber-500 to-amber-400 transition-all duration-700"
                   style={{
                     width:
                       (stats?.totalTasks > 0
@@ -323,9 +323,9 @@ const Dashboard = () => {
                   {stats?.lowPriorityTasks || 0}
                 </span>
               </div>
-              <div className="w-full h-2.5 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+              <div className="w-full h-2.5 rounded-sm bg-gray-200 dark:bg-gray-700 overflow-hidden">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-blue-500 to-blue-400 transition-all duration-700"
+                  className="h-full rounded-sm bg-gradient-to-r from-blue-500 to-blue-400 transition-all duration-700"
                   style={{
                     width:
                       (stats?.totalTasks > 0
@@ -360,7 +360,7 @@ const Dashboard = () => {
 
         {/* Recent Activity */}
         <div
-          className="lg:col-span-1 rounded-xl p-6 border"
+          className="lg:col-span-1 rounded-sm p-6 border"
           style={{
             backgroundColor: "var(--color-bg-secondary)",
             borderColor: "var(--color-border)",
@@ -388,9 +388,9 @@ const Dashboard = () => {
               {activities.slice(0, 8).map((activity) => (
                 <div
                   key={activity._id}
-                  className="flex items-start gap-3 p-2.5 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                  className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white font-semibold text-xs">
                       {activity.user?.name?.charAt(0)?.toUpperCase() || "U"}
                     </span>

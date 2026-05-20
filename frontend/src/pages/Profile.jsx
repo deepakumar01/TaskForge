@@ -65,7 +65,7 @@ const Profile = () => {
 
       {/* Profile card */}
       <div
-        className="rounded-xl border overflow-hidden"
+        className="rounded-sm border overflow-hidden"
         style={{
           backgroundColor: "var(--color-bg-secondary)",
           borderColor: "var(--color-border)",
@@ -74,7 +74,7 @@ const Profile = () => {
         {/* Banner */}
         <div className="h-32 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 relative">
           <div className="absolute -bottom-12 left-6">
-            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-700 flex items-center justify-center border-4 shadow-lg"
+            <div className="w-24 h-24 rounded-sm bg-gradient-to-br from-indigo-600 to-purple-700 flex items-center justify-center border-4 shadow-sm"
               style={{ borderColor: "var(--color-bg-secondary)" }}
             >
               <span className="text-white font-bold text-3xl">
@@ -96,7 +96,7 @@ const Profile = () => {
               </h2>
               <span
                 className={
-                  "inline-flex items-center gap-1.5 mt-1 px-3 py-0.5 rounded-full text-xs font-medium " +
+                  "inline-flex items-center gap-1.5 mt-1 px-3 py-0.5 rounded-sm text-xs font-medium " +
                   (user?.role === "admin"
                     ? "bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400"
                     : "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400")
@@ -109,7 +109,7 @@ const Profile = () => {
             {!editing && (
               <button
                 onClick={() => setEditing(true)}
-                className="px-4 py-2 rounded-xl border text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                className="px-4 py-2 rounded-sm border text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
                 style={{
                   borderColor: "var(--color-border)",
                   color: "var(--color-text-primary)",
@@ -137,7 +137,7 @@ const Profile = () => {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                  className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
                   style={{
                     backgroundColor: "var(--color-bg-tertiary)",
                     borderColor: "var(--color-border)",
@@ -160,7 +160,7 @@ const Profile = () => {
                     setFormData({ ...formData, email: e.target.value })
                   }
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                  className="w-full px-4 py-2.5 rounded-sm border text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
                   style={{
                     backgroundColor: "var(--color-bg-tertiary)",
                     borderColor: "var(--color-border)",
@@ -176,7 +176,7 @@ const Profile = () => {
                     setEditing(false);
                     setFormData({ name: user?.name || "", email: user?.email || "" });
                   }}
-                  className="px-4 py-2 rounded-xl text-sm font-medium"
+                  className="px-4 py-2 rounded-sm text-sm font-medium"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
                   Cancel
@@ -184,7 +184,7 @@ const Profile = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-6 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all disabled:opacity-50"
+                  className="px-6 py-2 rounded-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all disabled:opacity-50"
                 >
                   {loading ? "Saving..." : "Save Changes"}
                 </button>
@@ -193,7 +193,7 @@ const Profile = () => {
           ) : (
             /* Display info */
             <div className="space-y-4">
-              <div className="flex items-center gap-3 p-3 rounded-xl" style={{ backgroundColor: "var(--color-bg-tertiary)" }}>
+              <div className="flex items-center gap-3 p-3 rounded-sm" style={{ backgroundColor: "var(--color-bg-tertiary)" }}>
                 <HiOutlineMail className="w-5 h-5 text-indigo-500" />
                 <div>
                   <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
@@ -205,7 +205,7 @@ const Profile = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-3 rounded-xl" style={{ backgroundColor: "var(--color-bg-tertiary)" }}>
+              <div className="flex items-center gap-3 p-3 rounded-sm" style={{ backgroundColor: "var(--color-bg-tertiary)" }}>
                 <HiOutlineUser className="w-5 h-5 text-indigo-500" />
                 <div>
                   <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
@@ -217,7 +217,7 @@ const Profile = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-3 rounded-xl" style={{ backgroundColor: "var(--color-bg-tertiary)" }}>
+              <div className="flex items-center gap-3 p-3 rounded-sm" style={{ backgroundColor: "var(--color-bg-tertiary)" }}>
                 <HiOutlineCalendar className="w-5 h-5 text-indigo-500" />
                 <div>
                   <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>

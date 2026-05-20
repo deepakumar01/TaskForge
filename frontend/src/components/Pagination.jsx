@@ -35,7 +35,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="p-2 rounded-lg transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-gray-700"
+        className="p-2 rounded-sm transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-gray-700"
         style={{ color: "var(--color-text-secondary)" }}
       >
         <HiChevronLeft className="w-4 h-4" />
@@ -47,7 +47,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           key={page}
           onClick={() => onPageChange(page)}
           className={
-            "w-9 h-9 rounded-lg text-sm font-medium transition-colors " +
+            "w-9 h-9 rounded-sm text-sm font-medium transition-colors " +
             (page === currentPage
               ? "bg-indigo-500 text-white"
               : "hover:bg-gray-100 dark:hover:bg-gray-700")
@@ -66,7 +66,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="p-2 rounded-lg transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-gray-700"
+        className="p-2 rounded-sm transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-gray-700"
         style={{ color: "var(--color-text-secondary)" }}
       >
         <HiChevronRight className="w-4 h-4" />

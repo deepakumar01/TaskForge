@@ -36,7 +36,7 @@ const StatsCard = ({ title, value, icon: Icon, color, trend }) => {
   return (
     <div
       className={
-        "rounded-xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 " +
+        "rounded-sm p-5 border transition-all duration-300 hover:shadow-sm hover:-translate-y-0.5 " +
         theme.border
       }
       style={{ backgroundColor: "var(--color-bg-secondary)" }}
@@ -61,7 +61,7 @@ const StatsCard = ({ title, value, icon: Icon, color, trend }) => {
             </p>
           )}
         </div>
-        <div className={"p-3 rounded-xl " + theme.bg}>
+        <div className={"p-3 rounded-sm " + theme.bg}>
           {Icon && <Icon className={"w-6 h-6 " + theme.icon} />}
         </div>
       </div>

@@ -62,7 +62,7 @@ function App() {
               background: "var(--color-bg-secondary)",
               color: "var(--color-text-primary)",
               border: "1px solid var(--color-border)",
-              borderRadius: "12px",
+              borderRadius: "2px",
               fontSize: "14px",
             },
             success: {

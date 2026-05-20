@@ -65,7 +65,7 @@ const TaskCard = ({ task, onClick, onStatusChange, showProject = false }) => {
   return (
     <div
       className={
-        "rounded-xl p-4 border transition-all duration-200 hover:shadow-md cursor-pointer " +
+        "rounded-sm p-4 border transition-all duration-200 hover:shadow-sm cursor-pointer " +
         (isOverdue
           ? "border-red-300 dark:border-red-500/30"
           : "")
@@ -80,7 +80,7 @@ const TaskCard = ({ task, onClick, onStatusChange, showProject = false }) => {
       <div className="flex items-center justify-between mb-3">
         <span
           className={
-            "px-2 py-0.5 rounded-full text-xs font-medium " +
+            "px-2 py-0.5 rounded-sm text-xs font-medium " +
             priority.bg +
             " " +
             priority.text
@@ -99,7 +99,7 @@ const TaskCard = ({ task, onClick, onStatusChange, showProject = false }) => {
             }}
             onClick={(e) => e.stopPropagation()}
             className={
-              "px-2 py-0.5 rounded-full text-xs font-medium border-0 cursor-pointer " +
+              "px-2 py-0.5 rounded-sm text-xs font-medium border-0 cursor-pointer " +
               status.bg +
               " " +
               status.text
@@ -112,7 +112,7 @@ const TaskCard = ({ task, onClick, onStatusChange, showProject = false }) => {
         ) : (
           <span
             className={
-              "px-2 py-0.5 rounded-full text-xs font-medium " +
+              "px-2 py-0.5 rounded-sm text-xs font-medium " +
               status.bg +
               " " +
               status.text

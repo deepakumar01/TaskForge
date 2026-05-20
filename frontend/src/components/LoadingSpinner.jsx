@@ -14,7 +14,7 @@ const LoadingSpinner = ({ size = "md", text = "Loading..." }) => {
       <div
         className={
           sizes[size] +
-          " border-3 border-indigo-200 border-t-indigo-500 rounded-full animate-spin"
+          " border-3 border-indigo-200 border-t-indigo-500 rounded-sm animate-spin"
         }
       />
       {text && (
