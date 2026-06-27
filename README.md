@@ -26,7 +26,7 @@ A full-stack MERN application for managing team projects, tasks, and collaborati
 - **Member** - View assigned tasks, update task status, track progress
 
 ### Admin Features
-- Create, edit, and delete projects
+- Create, edit and delete projects
 - Add and remove team members from projects
 - Assign tasks to members
 - View analytics dashboard
